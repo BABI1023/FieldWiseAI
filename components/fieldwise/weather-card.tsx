@@ -1,6 +1,7 @@
 /** Displays localized meteorological data and safe operating windows */
 'use client';
 
+import React from 'react';
 import { CloudRain, Wind, Droplets, Thermometer, MapPin, Clock } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { weatherCodeLabel, formatTime } from '@/lib/weather';
@@ -12,7 +13,7 @@ interface WeatherCardProps {
   locationLabel: string;
 }
 
-export function WeatherCard({ forecast, safeWindow, locationLabel }: WeatherCardProps) {
+export const WeatherCard = React.memo(function WeatherCard({ forecast, safeWindow, locationLabel }: WeatherCardProps) {
   const { current } = forecast;
 
   const stats = [
@@ -107,4 +108,4 @@ export function WeatherCard({ forecast, safeWindow, locationLabel }: WeatherCard
       </div>
     </section>
   );
-}
+});
