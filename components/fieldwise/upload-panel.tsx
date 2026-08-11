@@ -1,3 +1,4 @@
+/** Manages file upload inputs and validation for agricultural imagery */
 'use client';
 
 import { useRef, useState } from 'react';
