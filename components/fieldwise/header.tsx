@@ -1,3 +1,4 @@
+/** Renders top navigation and application header elements */
 import { Leaf } from 'lucide-react';
 
 export function Header() {
