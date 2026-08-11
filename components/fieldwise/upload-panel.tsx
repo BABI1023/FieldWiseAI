@@ -1,7 +1,7 @@
 /** Manages file upload inputs and validation for agricultural imagery */
 'use client';
 
-import { useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Upload, ImagePlus, AlertCircle, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { validateImageFile, ACCEPTED_TYPES, MAX_FILE_SIZE } from '@/lib/file-validation';
@@ -11,7 +11,7 @@ interface UploadPanelProps {
   loading: boolean;
 }
 
-export function UploadPanel({ onFileSelected, loading }: UploadPanelProps) {
+export const UploadPanel = React.memo(function UploadPanel({ onFileSelected, loading }: UploadPanelProps) {
   const inputRef = useRef<HTMLInputElement>(null);
   const [error, setError] = useState<string | null>(null);
   const [dragging, setDragging] = useState(false);
@@ -102,4 +102,4 @@ export function UploadPanel({ onFileSelected, loading }: UploadPanelProps) {
       )}
     </div>
   );
-}
+});
