@@ -1,3 +1,4 @@
+/** Renders actionable agricultural advice based on multimodal analysis */
 'use client';
 
 import { AlertTriangle, CheckCircle2, Leaf, Sparkles } from 'lucide-react';
