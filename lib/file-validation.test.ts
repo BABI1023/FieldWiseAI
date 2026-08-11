@@ -30,6 +30,11 @@ describe('validateImageFile', () => {
     expect(result.error).toContain('Unsupported');
   });
 
+  it('rejects files with empty or unknown MIME type', () => {
+    const result = validateImageFile(makeFile('', 1024));
+    expect(result.valid).toBe(false);
+  });
+
   it('rejects files larger than 10MB', () => {
     const result = validateImageFile(makeFile('image/jpeg', MAX_FILE_SIZE + 1));
     expect(result.valid).toBe(false);
