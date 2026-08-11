@@ -2,6 +2,14 @@
   "name": "nextjs",
   "version": "0.1.0",
   "private": true,
+  "description": "AI-powered photo-driven agricultural crop health and weather intelligence platform",
+  "keywords": [
+    "ai-agriculture",
+    "crop-health",
+    "multimodal-ai",
+    "climate-resilience",
+    "nextjs"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
