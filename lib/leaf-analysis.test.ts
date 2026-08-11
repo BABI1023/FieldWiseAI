@@ -99,3 +99,8 @@ describe('scoreSeverity', () => {
     expect(r.label).toBe('Healthy foliage');
   });
 });
+it('rejects oversized files above maximum limit', () => {
+  const hugeFile = makeFile('image/jpeg', 15 * 1024 * 1024);
+  const result = validateImageFile(hugeFile);
+  expect(result.valid).toBe(false);
+});
