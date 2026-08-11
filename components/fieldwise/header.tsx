@@ -1,7 +1,8 @@
 /** Renders top navigation and application header elements */
+import React from 'react';
 import { Leaf } from 'lucide-react';
 
-export function Header() {
+export const Header = React.memo(function Header() {
   return (
     <header className="border-b border-border bg-card/50 backdrop-blur-sm">
       <div className="mx-auto flex max-w-5xl items-center gap-3 px-4 py-4 sm:px-6">
@@ -22,4 +23,4 @@ export function Header() {
       </div>
     </header>
   );
-}
+});
