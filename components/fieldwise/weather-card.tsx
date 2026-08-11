@@ -1,3 +1,4 @@
+/** Displays localized meteorological data and safe operating windows */
 'use client';
 
 import { CloudRain, Wind, Droplets, Thermometer, MapPin, Clock } from 'lucide-react';
