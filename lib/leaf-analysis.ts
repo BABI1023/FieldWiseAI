@@ -1,3 +1,4 @@
+/** Core leaf pathology analyzer for precision agriculture */
 import type { IssueCategory, PixelRatios, SeverityResult } from './types';
 
 export const CATEGORY_LABELS: Record<IssueCategory, string> = {
